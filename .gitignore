@@ -1,0 +1,12 @@
+# each line here specifies a pattern
+# if any file or folder in the repo matches any
+# of these patterns it will be ignored
+bin
+obj
+.vs
+.vscode/
+.sln
+
+
+# if a file is /already tracked/ by git, the
+# gitignore will not by itself remove it.
