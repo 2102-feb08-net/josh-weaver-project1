@@ -1,0 +1,12 @@
+C:\Revature\josh-weaver-project0\JoshsJelliesAndJamsDAL\bin\Debug\netcoreapp3.1\JoshsJelliesAndJams.DAL.deps.json
+C:\Revature\josh-weaver-project0\JoshsJelliesAndJamsDAL\bin\Debug\netcoreapp3.1\JoshsJelliesAndJams.DAL.dll
+C:\Revature\josh-weaver-project0\JoshsJelliesAndJamsDAL\bin\Debug\netcoreapp3.1\JoshsJelliesAndJams.DAL.pdb
+C:\Revature\josh-weaver-project0\JoshsJelliesAndJamsDAL\obj\Debug\netcoreapp3.1\JoshsJelliesAndJams.DAL.csprojAssemblyReference.cache
+C:\Revature\josh-weaver-project0\JoshsJelliesAndJamsDAL\obj\Debug\netcoreapp3.1\JoshsJelliesAndJams.DAL.AssemblyInfoInputs.cache
+C:\Revature\josh-weaver-project0\JoshsJelliesAndJamsDAL\obj\Debug\netcoreapp3.1\JoshsJelliesAndJams.DAL.AssemblyInfo.cs
+C:\Revature\josh-weaver-project0\JoshsJelliesAndJamsDAL\obj\Debug\netcoreapp3.1\JoshsJelliesAndJams.DAL.csproj.CoreCompileInputs.cache
+C:\Revature\josh-weaver-project0\JoshsJelliesAndJamsDAL\obj\Debug\netcoreapp3.1\JoshsJelliesAndJams.DAL.dll
+C:\Revature\josh-weaver-project0\JoshsJelliesAndJamsDAL\obj\Debug\netcoreapp3.1\JoshsJelliesAndJams.DAL.pdb
+C:\revature\josh-weaver-project0\JoshsJelliesAndJamsDAL\bin\Debug\netcoreapp3.1\JoshsJelliesAndJams.DAL.runtimeconfig.json
+C:\revature\josh-weaver-project0\JoshsJelliesAndJamsDAL\bin\Debug\netcoreapp3.1\JoshsJelliesAndJams.DAL.runtimeconfig.dev.json
+C:\revature\josh-weaver-project0\JoshsJelliesAndJamsDAL\obj\Debug\netcoreapp3.1\JoshsJelliesAndJams.DAL.genruntimeconfig.cache

@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\jweav\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\jweav\\.nuget\\packages"
+    ]
+  }
+}

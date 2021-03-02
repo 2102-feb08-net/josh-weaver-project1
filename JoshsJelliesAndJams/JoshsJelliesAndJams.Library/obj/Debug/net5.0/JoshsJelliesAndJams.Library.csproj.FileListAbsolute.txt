@@ -1,0 +1,15 @@
+C:\Revature\josh-weaver-project0\JoshsJelliesAndJams.Library\obj\Debug\net5.0\JoshsJelliesAndJams.Library.csprojAssemblyReference.cache
+C:\Revature\josh-weaver-project0\JoshsJelliesAndJams.Library\obj\Debug\net5.0\JoshsJelliesAndJams.Library.GeneratedMSBuildEditorConfig.editorconfig
+C:\Revature\josh-weaver-project0\JoshsJelliesAndJams.Library\obj\Debug\net5.0\JoshsJelliesAndJams.Library.AssemblyInfoInputs.cache
+C:\Revature\josh-weaver-project0\JoshsJelliesAndJams.Library\obj\Debug\net5.0\JoshsJelliesAndJams.Library.AssemblyInfo.cs
+C:\Revature\josh-weaver-project0\JoshsJelliesAndJams.Library\obj\Debug\net5.0\JoshsJelliesAndJams.Library.csproj.CoreCompileInputs.cache
+C:\Revature\josh-weaver-project0\JoshsJelliesAndJams.Library\bin\Debug\net5.0\JoshsJelliesAndJams.Library.deps.json
+C:\Revature\josh-weaver-project0\JoshsJelliesAndJams.Library\bin\Debug\net5.0\JoshsJelliesAndJams.Library.runtimeconfig.json
+C:\Revature\josh-weaver-project0\JoshsJelliesAndJams.Library\bin\Debug\net5.0\JoshsJelliesAndJams.Library.runtimeconfig.dev.json
+C:\Revature\josh-weaver-project0\JoshsJelliesAndJams.Library\bin\Debug\net5.0\JoshsJelliesAndJams.Library.dll
+C:\Revature\josh-weaver-project0\JoshsJelliesAndJams.Library\bin\Debug\net5.0\ref\JoshsJelliesAndJams.Library.dll
+C:\Revature\josh-weaver-project0\JoshsJelliesAndJams.Library\bin\Debug\net5.0\JoshsJelliesAndJams.Library.pdb
+C:\Revature\josh-weaver-project0\JoshsJelliesAndJams.Library\obj\Debug\net5.0\JoshsJelliesAndJams.Library.dll
+C:\Revature\josh-weaver-project0\JoshsJelliesAndJams.Library\obj\Debug\net5.0\ref\JoshsJelliesAndJams.Library.dll
+C:\Revature\josh-weaver-project0\JoshsJelliesAndJams.Library\obj\Debug\net5.0\JoshsJelliesAndJams.Library.pdb
+C:\Revature\josh-weaver-project0\JoshsJelliesAndJams.Library\obj\Debug\net5.0\JoshsJelliesAndJams.Library.genruntimeconfig.cache

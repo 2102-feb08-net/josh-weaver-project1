@@ -1,0 +1,9 @@
+#orderform {
+    width: 70%;
+    align-content: center;
+    background-color: blue;
+}
+
+td {
+    column-span: 33%;
+}

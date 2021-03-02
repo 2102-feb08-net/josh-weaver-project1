@@ -1,0 +1,9 @@
+C:\Revature\josh-weaver-project0\JoshsJelliesAndJamsDAL\obj\Debug\netcoreapp3.1\JoshsJelliesAndJamsDAL.csprojAssemblyReference.cache
+C:\Revature\josh-weaver-project0\JoshsJelliesAndJamsDAL\obj\Debug\netcoreapp3.1\JoshsJelliesAndJamsDAL.AssemblyInfoInputs.cache
+C:\Revature\josh-weaver-project0\JoshsJelliesAndJamsDAL\obj\Debug\netcoreapp3.1\JoshsJelliesAndJamsDAL.AssemblyInfo.cs
+C:\Revature\josh-weaver-project0\JoshsJelliesAndJamsDAL\obj\Debug\netcoreapp3.1\JoshsJelliesAndJamsDAL.csproj.CoreCompileInputs.cache
+C:\Revature\josh-weaver-project0\JoshsJelliesAndJamsDAL\bin\Debug\netcoreapp3.1\JoshsJelliesAndJamsDAL.deps.json
+C:\Revature\josh-weaver-project0\JoshsJelliesAndJamsDAL\bin\Debug\netcoreapp3.1\JoshsJelliesAndJamsDAL.dll
+C:\Revature\josh-weaver-project0\JoshsJelliesAndJamsDAL\bin\Debug\netcoreapp3.1\JoshsJelliesAndJamsDAL.pdb
+C:\Revature\josh-weaver-project0\JoshsJelliesAndJamsDAL\obj\Debug\netcoreapp3.1\JoshsJelliesAndJamsDAL.dll
+C:\Revature\josh-weaver-project0\JoshsJelliesAndJamsDAL\obj\Debug\netcoreapp3.1\JoshsJelliesAndJamsDAL.pdb
