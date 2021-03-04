@@ -177,3 +177,331 @@ info: 3/2/2021 16:36:53.306 RelationalEventId.CommandExecuted[20101] (Microsoft.
       SELECT TOP(1) [c].[CustomerId], [c].[City], [c].[CustomerCreated], [c].[DefaultStoreId], [c].[FirstName], [c].[LastName], [c].[State], [c].[StreetAddress1], [c].[StreetAddress2], [c].[Zipcode]
       FROM [Customer] AS [c]
       WHERE ([c].[FirstName] = @__appCustomer_FirstName_0) AND ([c].[LastName] = @__appCustomer_LastName_1)
+info: 3/2/2021 19:02:37.275 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'JoshsJelliesAndJamsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+info: 3/2/2021 19:02:38.273 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (93ms) [Parameters=[@p0='?' (Size = 50), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32), @p3='?' (Size = 50), @p4='?' (Size = 50), @p5='?' (Size = 2), @p6='?' (Size = 100), @p7='?' (Size = 100), @p8='?' (Size = 5)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      INSERT INTO [Customer] ([City], [CustomerCreated], [DefaultStoreId], [FirstName], [LastName], [State], [StreetAddress1], [StreetAddress2], [Zipcode])
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+      SELECT [CustomerId]
+      FROM [Customer]
+      WHERE @@ROWCOUNT = 1 AND [CustomerId] = scope_identity();
+info: 3/3/2021 16:02:08.624 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'JoshsJelliesAndJamsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+info: 3/3/2021 16:02:10.402 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (311ms) [Parameters=[@__storeID_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [i].[Id], [i].[ProductId], [i].[Quantity], [i].[StoreId], [p].[ProductId], [p].[Name], [p].[Price]
+      FROM [Inventory] AS [i]
+      LEFT JOIN [Product] AS [p] ON [i].[ProductId] = [p].[ProductId]
+      WHERE [i].[StoreId] = @__storeID_0
+info: 3/3/2021 16:03:45.203 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'JoshsJelliesAndJamsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+info: 3/3/2021 16:03:46.357 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (76ms) [Parameters=[@__storeID_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [i].[Id], [i].[ProductId], [i].[Quantity], [i].[StoreId], [p].[ProductId], [p].[Name], [p].[Price]
+      FROM [Inventory] AS [i]
+      LEFT JOIN [Product] AS [p] ON [i].[ProductId] = [p].[ProductId]
+      WHERE [i].[StoreId] = @__storeID_0
+info: 3/3/2021 16:05:15.052 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'JoshsJelliesAndJamsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+info: 3/3/2021 16:05:15.091 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (35ms) [Parameters=[@__storeID_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [i].[Id], [i].[ProductId], [i].[Quantity], [i].[StoreId], [p].[ProductId], [p].[Name], [p].[Price]
+      FROM [Inventory] AS [i]
+      LEFT JOIN [Product] AS [p] ON [i].[ProductId] = [p].[ProductId]
+      WHERE [i].[StoreId] = @__storeID_0
+info: 3/3/2021 16:09:23.977 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'JoshsJelliesAndJamsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+info: 3/3/2021 16:09:24.957 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (63ms) [Parameters=[@__storeID_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [i].[Id], [i].[ProductId], [i].[Quantity], [i].[StoreId], [p].[ProductId], [p].[Name], [p].[Price]
+      FROM [Inventory] AS [i]
+      LEFT JOIN [Product] AS [p] ON [i].[ProductId] = [p].[ProductId]
+      WHERE [i].[StoreId] = @__storeID_0
+info: 3/3/2021 16:15:37.214 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'JoshsJelliesAndJamsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+info: 3/3/2021 16:15:38.570 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (75ms) [Parameters=[@__storeID_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [i].[Id], [i].[ProductId], [i].[Quantity], [i].[StoreId], [p].[ProductId], [p].[Name], [p].[Price]
+      FROM [Inventory] AS [i]
+      LEFT JOIN [Product] AS [p] ON [i].[ProductId] = [p].[ProductId]
+      WHERE [i].[StoreId] = @__storeID_0
+info: 3/3/2021 16:15:54.248 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'JoshsJelliesAndJamsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+info: 3/3/2021 16:15:54.289 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (30ms) [Parameters=[@__storeID_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [i].[Id], [i].[ProductId], [i].[Quantity], [i].[StoreId], [p].[ProductId], [p].[Name], [p].[Price]
+      FROM [Inventory] AS [i]
+      LEFT JOIN [Product] AS [p] ON [i].[ProductId] = [p].[ProductId]
+      WHERE [i].[StoreId] = @__storeID_0
+info: 3/3/2021 16:45:00.801 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'JoshsJelliesAndJamsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+info: 3/3/2021 16:45:02.422 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (73ms) [Parameters=[@__storeID_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [i].[Id], [i].[ProductId], [i].[Quantity], [i].[StoreId], [p].[ProductId], [p].[Name], [p].[Price]
+      FROM [Inventory] AS [i]
+      LEFT JOIN [Product] AS [p] ON [i].[ProductId] = [p].[ProductId]
+      WHERE [i].[StoreId] = @__storeID_0
+info: 3/3/2021 16:52:00.409 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'JoshsJelliesAndJamsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+info: 3/3/2021 16:52:01.960 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (85ms) [Parameters=[@__storeID_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [i].[Id], [i].[ProductId], [i].[Quantity], [i].[StoreId], [p].[ProductId], [p].[Name], [p].[Price]
+      FROM [Inventory] AS [i]
+      LEFT JOIN [Product] AS [p] ON [i].[ProductId] = [p].[ProductId]
+      WHERE [i].[StoreId] = @__storeID_0
+info: 3/3/2021 16:52:12.408 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'JoshsJelliesAndJamsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+info: 3/3/2021 16:52:12.445 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (33ms) [Parameters=[@__storeID_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [i].[Id], [i].[ProductId], [i].[Quantity], [i].[StoreId], [p].[ProductId], [p].[Name], [p].[Price]
+      FROM [Inventory] AS [i]
+      LEFT JOIN [Product] AS [p] ON [i].[ProductId] = [p].[ProductId]
+      WHERE [i].[StoreId] = @__storeID_0
+info: 3/3/2021 16:52:19.109 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'JoshsJelliesAndJamsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+info: 3/3/2021 16:52:19.151 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (40ms) [Parameters=[@__storeID_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [i].[Id], [i].[ProductId], [i].[Quantity], [i].[StoreId], [p].[ProductId], [p].[Name], [p].[Price]
+      FROM [Inventory] AS [i]
+      LEFT JOIN [Product] AS [p] ON [i].[ProductId] = [p].[ProductId]
+      WHERE [i].[StoreId] = @__storeID_0
+info: 3/3/2021 16:52:22.049 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'JoshsJelliesAndJamsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+info: 3/3/2021 16:52:22.092 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (42ms) [Parameters=[@__storeID_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [i].[Id], [i].[ProductId], [i].[Quantity], [i].[StoreId], [p].[ProductId], [p].[Name], [p].[Price]
+      FROM [Inventory] AS [i]
+      LEFT JOIN [Product] AS [p] ON [i].[ProductId] = [p].[ProductId]
+      WHERE [i].[StoreId] = @__storeID_0
+info: 3/3/2021 16:55:57.218 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'JoshsJelliesAndJamsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+info: 3/3/2021 16:55:58.583 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (123ms) [Parameters=[@__fname_0='?' (Size = 50), @__lname_1='?' (Size = 50)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [c].[CustomerId], [c].[City], [c].[CustomerCreated], [c].[DefaultStoreId], [c].[FirstName], [c].[LastName], [c].[State], [c].[StreetAddress1], [c].[StreetAddress2], [c].[Zipcode], [s].[StoreId], [s].[City], [s].[Name], [s].[State], [s].[StreetAddress1], [s].[StreetAddress2], [s].[Zipcode]
+      FROM [Customer] AS [c]
+      LEFT JOIN [Store] AS [s] ON [c].[DefaultStoreId] = [s].[StoreId]
+      WHERE ([c].[FirstName] = @__fname_0) AND ([c].[LastName] = @__lname_1)
+info: 3/3/2021 16:58:15.629 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'JoshsJelliesAndJamsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+info: 3/3/2021 16:58:17.207 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (108ms) [Parameters=[@__fname_0='?' (Size = 50), @__lname_1='?' (Size = 50)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [c].[CustomerId], [c].[City], [c].[CustomerCreated], [c].[DefaultStoreId], [c].[FirstName], [c].[LastName], [c].[State], [c].[StreetAddress1], [c].[StreetAddress2], [c].[Zipcode], [s].[StoreId], [s].[City], [s].[Name], [s].[State], [s].[StreetAddress1], [s].[StreetAddress2], [s].[Zipcode]
+      FROM [Customer] AS [c]
+      LEFT JOIN [Store] AS [s] ON [c].[DefaultStoreId] = [s].[StoreId]
+      WHERE ([c].[FirstName] = @__fname_0) AND ([c].[LastName] = @__lname_1)
+info: 3/3/2021 16:58:50.868 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'JoshsJelliesAndJamsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+info: 3/3/2021 16:58:52.226 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (88ms) [Parameters=[@__fname_0='?' (Size = 50), @__lname_1='?' (Size = 50)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [c].[CustomerId], [c].[City], [c].[CustomerCreated], [c].[DefaultStoreId], [c].[FirstName], [c].[LastName], [c].[State], [c].[StreetAddress1], [c].[StreetAddress2], [c].[Zipcode], [s].[StoreId], [s].[City], [s].[Name], [s].[State], [s].[StreetAddress1], [s].[StreetAddress2], [s].[Zipcode]
+      FROM [Customer] AS [c]
+      LEFT JOIN [Store] AS [s] ON [c].[DefaultStoreId] = [s].[StoreId]
+      WHERE ([c].[FirstName] = @__fname_0) AND ([c].[LastName] = @__lname_1)
+info: 3/3/2021 16:59:23.126 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'JoshsJelliesAndJamsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+info: 3/3/2021 16:59:24.766 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (80ms) [Parameters=[@__fname_0='?' (Size = 50), @__lname_1='?' (Size = 50)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [c].[CustomerId], [c].[City], [c].[CustomerCreated], [c].[DefaultStoreId], [c].[FirstName], [c].[LastName], [c].[State], [c].[StreetAddress1], [c].[StreetAddress2], [c].[Zipcode], [s].[StoreId], [s].[City], [s].[Name], [s].[State], [s].[StreetAddress1], [s].[StreetAddress2], [s].[Zipcode]
+      FROM [Customer] AS [c]
+      LEFT JOIN [Store] AS [s] ON [c].[DefaultStoreId] = [s].[StoreId]
+      WHERE ([c].[FirstName] = @__fname_0) AND ([c].[LastName] = @__lname_1)
+info: 3/3/2021 16:59:48.260 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'JoshsJelliesAndJamsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+info: 3/3/2021 16:59:48.385 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (42ms) [Parameters=[@__storeID_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [i].[Id], [i].[ProductId], [i].[Quantity], [i].[StoreId], [p].[ProductId], [p].[Name], [p].[Price]
+      FROM [Inventory] AS [i]
+      LEFT JOIN [Product] AS [p] ON [i].[ProductId] = [p].[ProductId]
+      WHERE [i].[StoreId] = @__storeID_0
+info: 3/3/2021 17:48:26.343 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'JoshsJelliesAndJamsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+info: 3/3/2021 17:48:27.834 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (102ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [s].[StoreId], [s].[City], [s].[Name], [s].[State], [s].[StreetAddress1], [s].[StreetAddress2], [s].[Zipcode]
+      FROM [Store] AS [s]
+info: 3/3/2021 18:08:04.446 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'JoshsJelliesAndJamsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+info: 3/3/2021 18:08:06.192 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (70ms) [Parameters=[@__storeID_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [i].[Id], [i].[ProductId], [i].[Quantity], [i].[StoreId], [p].[ProductId], [p].[Name], [p].[Price]
+      FROM [Inventory] AS [i]
+      LEFT JOIN [Product] AS [p] ON [i].[ProductId] = [p].[ProductId]
+      WHERE [i].[StoreId] = @__storeID_0
+info: 3/3/2021 18:10:23.890 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'JoshsJelliesAndJamsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+info: 3/3/2021 18:10:23.937 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (36ms) [Parameters=[@__storeID_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [i].[Id], [i].[ProductId], [i].[Quantity], [i].[StoreId], [p].[ProductId], [p].[Name], [p].[Price]
+      FROM [Inventory] AS [i]
+      LEFT JOIN [Product] AS [p] ON [i].[ProductId] = [p].[ProductId]
+      WHERE [i].[StoreId] = @__storeID_0
+info: 3/3/2021 18:11:49.358 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'JoshsJelliesAndJamsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+info: 3/3/2021 18:11:49.635 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (34ms) [Parameters=[@__storeID_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [i].[Id], [i].[ProductId], [i].[Quantity], [i].[StoreId], [p].[ProductId], [p].[Name], [p].[Price]
+      FROM [Inventory] AS [i]
+      LEFT JOIN [Product] AS [p] ON [i].[ProductId] = [p].[ProductId]
+      WHERE [i].[StoreId] = @__storeID_0
+info: 3/3/2021 18:17:38.295 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'JoshsJelliesAndJamsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+info: 3/3/2021 18:17:40.229 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (338ms) [Parameters=[@__storeID_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [i].[Id], [i].[ProductId], [i].[Quantity], [i].[StoreId], [p].[ProductId], [p].[Name], [p].[Price]
+      FROM [Inventory] AS [i]
+      LEFT JOIN [Product] AS [p] ON [i].[ProductId] = [p].[ProductId]
+      WHERE [i].[StoreId] = @__storeID_0
+info: 3/3/2021 18:26:14.520 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'JoshsJelliesAndJamsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+info: 3/3/2021 18:26:15.565 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (59ms) [Parameters=[@__storeID_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [i].[Id], [i].[ProductId], [i].[Quantity], [i].[StoreId], [p].[ProductId], [p].[Name], [p].[Price]
+      FROM [Inventory] AS [i]
+      LEFT JOIN [Product] AS [p] ON [i].[ProductId] = [p].[ProductId]
+      WHERE [i].[StoreId] = @__storeID_0
+info: 3/3/2021 18:28:00.333 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'JoshsJelliesAndJamsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+info: 3/3/2021 18:28:00.369 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (30ms) [Parameters=[@__storeID_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [i].[Id], [i].[ProductId], [i].[Quantity], [i].[StoreId], [p].[ProductId], [p].[Name], [p].[Price]
+      FROM [Inventory] AS [i]
+      LEFT JOIN [Product] AS [p] ON [i].[ProductId] = [p].[ProductId]
+      WHERE [i].[StoreId] = @__storeID_0
+info: 3/3/2021 18:28:46.025 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'JoshsJelliesAndJamsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+info: 3/3/2021 18:28:46.059 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (32ms) [Parameters=[@__storeID_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [i].[Id], [i].[ProductId], [i].[Quantity], [i].[StoreId], [p].[ProductId], [p].[Name], [p].[Price]
+      FROM [Inventory] AS [i]
+      LEFT JOIN [Product] AS [p] ON [i].[ProductId] = [p].[ProductId]
+      WHERE [i].[StoreId] = @__storeID_0
+info: 3/3/2021 18:29:29.606 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'JoshsJelliesAndJamsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+info: 3/3/2021 18:29:29.637 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (26ms) [Parameters=[@__storeID_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [i].[Id], [i].[ProductId], [i].[Quantity], [i].[StoreId], [p].[ProductId], [p].[Name], [p].[Price]
+      FROM [Inventory] AS [i]
+      LEFT JOIN [Product] AS [p] ON [i].[ProductId] = [p].[ProductId]
+      WHERE [i].[StoreId] = @__storeID_0
+info: 3/3/2021 18:33:00.458 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'JoshsJelliesAndJamsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+info: 3/3/2021 18:33:00.491 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (32ms) [Parameters=[@__storeID_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [i].[Id], [i].[ProductId], [i].[Quantity], [i].[StoreId], [p].[ProductId], [p].[Name], [p].[Price]
+      FROM [Inventory] AS [i]
+      LEFT JOIN [Product] AS [p] ON [i].[ProductId] = [p].[ProductId]
+      WHERE [i].[StoreId] = @__storeID_0
+info: 3/3/2021 18:38:40.748 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'JoshsJelliesAndJamsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+info: 3/3/2021 18:38:40.785 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (28ms) [Parameters=[@__storeID_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [i].[Id], [i].[ProductId], [i].[Quantity], [i].[StoreId], [p].[ProductId], [p].[Name], [p].[Price]
+      FROM [Inventory] AS [i]
+      LEFT JOIN [Product] AS [p] ON [i].[ProductId] = [p].[ProductId]
+      WHERE [i].[StoreId] = @__storeID_0
+info: 3/3/2021 18:40:14.523 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'JoshsJelliesAndJamsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+info: 3/3/2021 18:40:14.559 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (35ms) [Parameters=[@__storeID_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [i].[Id], [i].[ProductId], [i].[Quantity], [i].[StoreId], [p].[ProductId], [p].[Name], [p].[Price]
+      FROM [Inventory] AS [i]
+      LEFT JOIN [Product] AS [p] ON [i].[ProductId] = [p].[ProductId]
+      WHERE [i].[StoreId] = @__storeID_0
+info: 3/3/2021 18:41:38.024 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'JoshsJelliesAndJamsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+info: 3/3/2021 18:41:38.059 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (34ms) [Parameters=[@__storeID_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [i].[Id], [i].[ProductId], [i].[Quantity], [i].[StoreId], [p].[ProductId], [p].[Name], [p].[Price]
+      FROM [Inventory] AS [i]
+      LEFT JOIN [Product] AS [p] ON [i].[ProductId] = [p].[ProductId]
+      WHERE [i].[StoreId] = @__storeID_0
+info: 3/3/2021 18:49:01.857 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'JoshsJelliesAndJamsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+info: 3/3/2021 18:49:02.204 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (44ms) [Parameters=[@__storeID_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [i].[Id], [i].[ProductId], [i].[Quantity], [i].[StoreId], [p].[ProductId], [p].[Name], [p].[Price]
+      FROM [Inventory] AS [i]
+      LEFT JOIN [Product] AS [p] ON [i].[ProductId] = [p].[ProductId]
+      WHERE [i].[StoreId] = @__storeID_0
+info: 3/3/2021 18:50:04.813 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'JoshsJelliesAndJamsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+info: 3/3/2021 18:50:04.843 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (30ms) [Parameters=[@__storeID_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [i].[Id], [i].[ProductId], [i].[Quantity], [i].[StoreId], [p].[ProductId], [p].[Name], [p].[Price]
+      FROM [Inventory] AS [i]
+      LEFT JOIN [Product] AS [p] ON [i].[ProductId] = [p].[ProductId]
+      WHERE [i].[StoreId] = @__storeID_0
+info: 3/3/2021 18:53:39.493 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'JoshsJelliesAndJamsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+info: 3/3/2021 18:53:39.527 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (33ms) [Parameters=[@__storeID_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [i].[Id], [i].[ProductId], [i].[Quantity], [i].[StoreId], [p].[ProductId], [p].[Name], [p].[Price]
+      FROM [Inventory] AS [i]
+      LEFT JOIN [Product] AS [p] ON [i].[ProductId] = [p].[ProductId]
+      WHERE [i].[StoreId] = @__storeID_0
+info: 3/3/2021 18:54:05.043 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'JoshsJelliesAndJamsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+info: 3/3/2021 18:54:05.081 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (36ms) [Parameters=[@__storeID_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [i].[Id], [i].[ProductId], [i].[Quantity], [i].[StoreId], [p].[ProductId], [p].[Name], [p].[Price]
+      FROM [Inventory] AS [i]
+      LEFT JOIN [Product] AS [p] ON [i].[ProductId] = [p].[ProductId]
+      WHERE [i].[StoreId] = @__storeID_0
+info: 3/3/2021 18:56:14.211 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'JoshsJelliesAndJamsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+info: 3/3/2021 18:56:14.239 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (28ms) [Parameters=[@__storeID_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [i].[Id], [i].[ProductId], [i].[Quantity], [i].[StoreId], [p].[ProductId], [p].[Name], [p].[Price]
+      FROM [Inventory] AS [i]
+      LEFT JOIN [Product] AS [p] ON [i].[ProductId] = [p].[ProductId]
+      WHERE [i].[StoreId] = @__storeID_0
+info: 3/3/2021 18:56:44.182 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'JoshsJelliesAndJamsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+info: 3/3/2021 18:56:44.223 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (38ms) [Parameters=[@__storeID_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [i].[Id], [i].[ProductId], [i].[Quantity], [i].[StoreId], [p].[ProductId], [p].[Name], [p].[Price]
+      FROM [Inventory] AS [i]
+      LEFT JOIN [Product] AS [p] ON [i].[ProductId] = [p].[ProductId]
+      WHERE [i].[StoreId] = @__storeID_0
+info: 3/3/2021 18:58:00.592 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'JoshsJelliesAndJamsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+info: 3/3/2021 18:58:00.622 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (30ms) [Parameters=[@__storeID_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [i].[Id], [i].[ProductId], [i].[Quantity], [i].[StoreId], [p].[ProductId], [p].[Name], [p].[Price]
+      FROM [Inventory] AS [i]
+      LEFT JOIN [Product] AS [p] ON [i].[ProductId] = [p].[ProductId]
+      WHERE [i].[StoreId] = @__storeID_0
+info: 3/3/2021 19:00:11.563 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'JoshsJelliesAndJamsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+info: 3/3/2021 19:00:11.644 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (77ms) [Parameters=[@__storeID_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [i].[Id], [i].[ProductId], [i].[Quantity], [i].[StoreId], [p].[ProductId], [p].[Name], [p].[Price]
+      FROM [Inventory] AS [i]
+      LEFT JOIN [Product] AS [p] ON [i].[ProductId] = [p].[ProductId]
+      WHERE [i].[StoreId] = @__storeID_0
+info: 3/3/2021 19:00:45.480 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'JoshsJelliesAndJamsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+info: 3/3/2021 19:00:45.521 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (39ms) [Parameters=[@__storeID_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [i].[Id], [i].[ProductId], [i].[Quantity], [i].[StoreId], [p].[ProductId], [p].[Name], [p].[Price]
+      FROM [Inventory] AS [i]
+      LEFT JOIN [Product] AS [p] ON [i].[ProductId] = [p].[ProductId]
+      WHERE [i].[StoreId] = @__storeID_0
+info: 3/3/2021 19:01:08.314 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'JoshsJelliesAndJamsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+info: 3/3/2021 19:01:08.381 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (35ms) [Parameters=[@__storeID_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [i].[Id], [i].[ProductId], [i].[Quantity], [i].[StoreId], [p].[ProductId], [p].[Name], [p].[Price]
+      FROM [Inventory] AS [i]
+      LEFT JOIN [Product] AS [p] ON [i].[ProductId] = [p].[ProductId]
+      WHERE [i].[StoreId] = @__storeID_0
+info: 3/3/2021 19:03:38.560 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'JoshsJelliesAndJamsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+info: 3/3/2021 19:03:38.596 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (35ms) [Parameters=[@__storeID_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [i].[Id], [i].[ProductId], [i].[Quantity], [i].[StoreId], [p].[ProductId], [p].[Name], [p].[Price]
+      FROM [Inventory] AS [i]
+      LEFT JOIN [Product] AS [p] ON [i].[ProductId] = [p].[ProductId]
+      WHERE [i].[StoreId] = @__storeID_0

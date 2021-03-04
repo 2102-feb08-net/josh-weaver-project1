@@ -10,9 +10,9 @@ namespace JoshsJelliesAndJams.WEBUI.Controllers
     {
         private readonly ICustomerRepository _customerRepository;
 
-        public CustomerController()
+        public CustomerController(ICustomerRepository customerRepository)
         {
-            _customerRepository = new CustomerRepository();
+            _customerRepository = customerRepository;
         }
 
         [HttpPost("api/newcustomer")]
@@ -21,7 +21,7 @@ namespace JoshsJelliesAndJams.WEBUI.Controllers
             return _customerRepository.AddCustomer(appCustomer);
         }
 
-        [HttpGet("api/lookupcustomer")]
+        [HttpGet("api/lookupcustomer/{fname}/{lname}")]
         public CustomerModel LookupCustomer(string fname, string lname)
         {
             return _customerRepository.LookupCustomer(fname, lname);

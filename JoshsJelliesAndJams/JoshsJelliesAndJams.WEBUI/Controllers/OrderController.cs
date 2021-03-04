@@ -11,9 +11,9 @@ namespace JoshsJelliesAndJams.WEBUI.Controllers
     {
         private readonly IOrderRepository _orderRepository;
 
-        public OrderController()
+        public OrderController(IOrderRepository orderRepository)
         {
-            _orderRepository = new OrderRepository();
+            _orderRepository = orderRepository;
         }
 
         [HttpPost("api/neworder")]

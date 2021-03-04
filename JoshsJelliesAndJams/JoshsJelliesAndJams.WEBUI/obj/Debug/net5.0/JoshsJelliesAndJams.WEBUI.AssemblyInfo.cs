@@ -11,6 +11,7 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("a897b2eb-0e9a-487d-9b7e-9e0b63c5dcc4")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("JoshsJelliesAndJams.WEBUI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
