@@ -17,4 +17,6 @@ stages:
       inputs:
         script: dotnet build --configuration $(buildConfiguration)
         workingDirectory: 'JoshsJelliesAndJams/'
-
+    - task: DotNetCoreCLI@2
+      inputs:
+        command: 'test'
