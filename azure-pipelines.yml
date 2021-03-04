@@ -7,11 +7,11 @@ resources:
   repositories:
   - repository: master
     type: git
-    name: JoshsJelliesAndJams
+    name: JoshsJelliesAndJams/
     ref: master
     trigger:
     - main
-    - master/*
+    - master
 
 pool:
   vmImage: ubuntu-latest
