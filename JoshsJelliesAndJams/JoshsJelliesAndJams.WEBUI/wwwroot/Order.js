@@ -16,11 +16,15 @@ ProductTable(id)
 
         for (const prod in products) {
             const row = ordertable.insertRow();
-            console.log(products[prod]);
             row.innerHTML = `<td>${products[prod].productId}</td>
                              <td>${products[prod].name}</td>
                              <td><label for="quantity" name="quantity"><input type="text" id="quantity"></input></label></td>
-                             <td>${products[prod].costPerItem}</td>`
+                             <td id="costPerItem">${products[prod].costPerItem}</td>
+                             <td><label for="total" name="total"><input type="text" id="total" readonly></input></label></td>`;
+            row.addEventListener('change', () => {
+                console.log(quantity.value);
+                total[prod].defaultValue = parseFloat(quantity.value) * parseFloat(costPerItem.value);
+            });
         };
     });
     
