@@ -20,3 +20,10 @@ stages:
     - task: DotNetCoreCLI@2
       inputs:
         command: 'test'
+    - task: AzureRmWebAppDeployment@4
+      inputs:
+        ConnectionType: 'AzureRM'
+        azureSubscription: 'Azure subscription 1(916e3336-1de8-428b-81d9-ef20a2cbe4f9)'
+        appType: 'webApp'
+        WebAppName: 'JoshsJelliesAndJams'
+        packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
