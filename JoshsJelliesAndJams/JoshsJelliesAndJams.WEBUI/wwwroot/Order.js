@@ -35,7 +35,7 @@ let productlist = [{}];
 
 function SubmitOrder(e){
     e.preventDefault();
-    console.log('test');
+    productlist = [{}];
     let table = document.getElementById('ordertable');
     let i;
     for (i = 0; i < table.rows.length; i++) {
@@ -113,6 +113,7 @@ function ToDb(newOrder) {
             if (!response.ok) {
                 throw new Error(`Network response was not ok (${response.status})`);
             }
+            alert("Thank you! Your order was accepted");
             return response.json();
         }); 
 }
