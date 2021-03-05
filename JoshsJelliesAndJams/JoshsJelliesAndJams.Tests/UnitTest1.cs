@@ -1,4 +1,5 @@
 using JoshsJelliesAndJams.Library;
+using JoshsJelliesAndJams.Library.svc;
 using System;
 using Xunit;
 
@@ -24,6 +25,20 @@ namespace JoshsJelliesAndJams.Tests
             };
             //assert
             Assert.Equal(testName, testCustomer.FirstName);
+        }
+
+        [Fact]
+        public void StringValidatorTest()
+        {
+            //arrange
+            string expected = "JOSH";
+            string test = "josh";
+            //act
+
+            test.StringValidator();
+            //assert
+
+            Assert.True(true, test);
         }
     }
 }
