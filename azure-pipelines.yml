@@ -54,7 +54,7 @@ stages:
     - task: PublishCodeCoverageResults@1
       inputs:
         codeCoverageTool: 'Cobertura'
-        summaryFileLocation: 'test-analysis'
+        summaryFileLocation: '$(Agent.TempDirectory)/*/coverage.cobertura.xml'
 
     - task: DotNetCoreCLI@2
       inputs:
