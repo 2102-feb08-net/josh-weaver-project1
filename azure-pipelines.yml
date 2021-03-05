@@ -35,21 +35,26 @@ stages:
       inputs:
         script: dotnet build --configuration $(buildConfiguration)
         workingDirectory: 'JoshsJelliesAndJams/'
-  
+
+    - task: DotNetCoreCLI@2
+      displayName: dotnet test
+      inputs:
+        command: 'test'
+        arguments: '--configuration $(buildConfiguration) --collect "xplat code coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=cobertura,opencover'
+        workingDirectory: 'JoshsJelliesAndJams/'
+   
     - task: SonarCloudAnalyze@1
+      displayName: sonar run analysis
 
     - task: SonarCloudPublish@1
       inputs:
         pollingTimeoutSec: '300'
 
-   # - task: DotNetCoreCLI@2
-    #  inputs:
-     #   command: 'test'
     
-#    - task: PublishCodeCoverageResults@1
- #     inputs:
-  #      codeCoverageTool: 'Cobertura'
-   #     summaryFileLocation: 'test-analysis'
+    - task: PublishCodeCoverageResults@1
+      inputs:
+        codeCoverageTool: 'Cobertura'
+        summaryFileLocation: 'test-analysis'
 
     - task: DotNetCoreCLI@2
       inputs:
