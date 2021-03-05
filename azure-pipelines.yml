@@ -12,9 +12,54 @@ stages:
     pool:
       vmImage: ubuntu-latest
     steps:
+    - task: UseDotNet@2
+      inputs:
+        packageType: 'sdk'
+        version: '5.0.x'
+    
+    - task: UseDotNet@2
+      inputs:
+        packageType: 'runtime'
+        version: '2.x'
+        
+    - task: SonarCloudPrepare@1
+      inputs:
+        SonarCloud: 'SonarCloud'
+        organization: '2102-feb08-net'
+        scannerMode: 'MSBuild'
+        projectKey: '2102-feb08-net_josh-weaver-project1'
+        projectName: 'JoshsJelliesAndJams'
+        
     - task: CmdLine@2
       displayName: 'dotnet build $(buildConfiguration)'
       inputs:
         script: dotnet build --configuration $(buildConfiguration)
         workingDirectory: 'JoshsJelliesAndJams/'
+  
+    - task: SonarCloudAnalyze@1
 
+    - task: SonarCloudPublish@1
+      inputs:
+        pollingTimeoutSec: '300'
+
+   # - task: DotNetCoreCLI@2
+    #  inputs:
+     #   command: 'test'
+    
+#    - task: PublishCodeCoverageResults@1
+ #     inputs:
+  #      codeCoverageTool: 'Cobertura'
+   #     summaryFileLocation: 'test-analysis'
+
+    - task: DotNetCoreCLI@2
+      inputs:
+        command: 'publish'
+        publishWebProjects: true
+      
+    - task: AzureRmWebAppDeployment@4
+      inputs:
+        ConnectionType: 'AzureRM'
+        azureSubscription: 'Azure subscription 1(916e3336-1de8-428b-81d9-ef20a2cbe4f9)'
+        appType: 'webApp'
+        WebAppName: 'JoshsJelliesAndJams'
+        packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
