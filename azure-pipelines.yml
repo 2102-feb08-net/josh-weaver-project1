@@ -42,9 +42,9 @@ stages:
       inputs:
         pollingTimeoutSec: '300'
 
-    - task: DotNetCoreCLI@2
-      inputs:
-        command: 'test'
+   # - task: DotNetCoreCLI@2
+    #  inputs:
+     #   command: 'test'
     
     - task: PublishCodeCoverageResults@1
       inputs:
