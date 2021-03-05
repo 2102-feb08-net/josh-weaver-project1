@@ -57,33 +57,46 @@ function SubmitOrder(e){
     RemoveBlanks(productlist);
 };
 
+const convertArrayToObject = (array, key) => {
+    const initialValue = {};
+    return array.reduce((obj, item) => {
+        return {
+            ...obj,
+            [item[key]]: item,
+        };
+    }, initialValue);
+};
+
 function RemoveBlanks(productlist) {
-    let blankProducts = productlist.filter(x => (x.quantity <= "0") || (x.quantity === "") || (x.quantity === undefined));
     productlist = productlist.filter(x => (x.quantity > "0") && (x.quantity != undefined));
     ConstructOrder(productlist)
 }
 
+
+
 function ConstructOrder(productlist) {
     let totalCost = 0;
     let totalQuantity = 0;
+    //let productObject = convertArrayToObject(productlist, "productId");
+
+    //console.log(productObject);
 
     for (let item of productlist) {
-        console.log(item.quantity);
-        console.log(item.costPerItem);
-
         totalCost += parseFloat(item.costPerItem);
         totalQuantity += parseInt(item.quantity);
     };
 
     let newOrder = {
         "orderNumber": undefined,
-        "productList": productlist,
+        "product": productlist,
         "orderPlaced": undefined,
         "total": parseFloat(totalCost).toFixed(2),
         "numberOfProducts": parseInt(totalQuantity),
-        "customerId": "17",
+        "customerNumber": "17",
         "storeId": "1"
     };
+
+    console.log(newOrder);
 
     ToDb(newOrder)
 }
