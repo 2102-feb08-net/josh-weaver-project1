@@ -82,7 +82,7 @@ function ConstructOrder(productlist) {
     //console.log(productObject);
 
     for (let item of productlist) {
-        totalCost += parseFloat(item.costPerItem);
+        totalCost += parseFloat(item.totalLine);
         totalQuantity += parseInt(item.quantity);
     };
 
