@@ -12,14 +12,26 @@ stages:
     pool:
       vmImage: ubuntu-latest
     steps:
+    - task: UseDotNet@2
+      inputs:
+        packageType: 'sdk'
+        version: '5.0.x'
+        
     - task: CmdLine@2
       displayName: 'dotnet build $(buildConfiguration)'
       inputs:
         script: dotnet build --configuration $(buildConfiguration)
         workingDirectory: 'JoshsJelliesAndJams/'
+
     - task: DotNetCoreCLI@2
       inputs:
         command: 'test'
+
+    - task: DotNetCoreCLI@2
+      inputs:
+        command: 'publish'
+        publishWebProjects: true
+      
     - task: AzureRmWebAppDeployment@4
       inputs:
         ConnectionType: 'AzureRM'
