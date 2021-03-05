@@ -46,10 +46,10 @@ stages:
     #  inputs:
      #   command: 'test'
     
-    - task: PublishCodeCoverageResults@1
-      inputs:
-        codeCoverageTool: 'Cobertura'
-        summaryFileLocation: 'test-analysis'
+#    - task: PublishCodeCoverageResults@1
+ #     inputs:
+  #      codeCoverageTool: 'Cobertura'
+   #     summaryFileLocation: 'test-analysis'
 
     - task: DotNetCoreCLI@2
       inputs:
