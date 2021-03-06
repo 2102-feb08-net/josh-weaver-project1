@@ -1,4 +1,5 @@
-﻿"use strict;"
+﻿/* eslint-disable no-undef */
+'use strict';
 
 function NewUser(e) {
     e.preventDefault();
@@ -17,7 +18,7 @@ function NewUser(e) {
     };
     console.log(newuser);
     Ping(newuser);
-};
+}
 
 function Ping(newuser) {
     return fetch('/api/customer/add', {
@@ -36,4 +37,4 @@ function Ping(newuser) {
 }
 
 
-submit.addEventListener("click", NewUser);
+submit.addEventListener('click', NewUser);

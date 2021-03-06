@@ -1,4 +1,4 @@
-﻿"use strict;"
+﻿'use strict';
 
 let id = 1;
 
@@ -30,6 +30,7 @@ ProductTable(id)
     });
 
 
+
 let order;
 let productlist = [{}];
 
@@ -57,15 +58,6 @@ function SubmitOrder(e){
     RemoveBlanks(productlist);
 };
 
-const convertArrayToObject = (array, key) => {
-    const initialValue = {};
-    return array.reduce((obj, item) => {
-        return {
-            ...obj,
-            [item[key]]: item,
-        };
-    }, initialValue);
-};
 
 function RemoveBlanks(productlist) {
     productlist = productlist.filter(x => (x.quantity > "0") && (x.quantity != undefined));
@@ -77,9 +69,6 @@ function RemoveBlanks(productlist) {
 function ConstructOrder(productlist) {
     let totalCost = 0;
     let totalQuantity = 0;
-    //let productObject = convertArrayToObject(productlist, "productId");
-
-    //console.log(productObject);
 
     for (let item of productlist) {
         totalCost += parseFloat(item.totalLine);
@@ -95,9 +84,6 @@ function ConstructOrder(productlist) {
         "customerNumber": "17",
         "storeId": "1"
     };
-
-    console.log(newOrder);
-
     ToDb(newOrder)
 }
 

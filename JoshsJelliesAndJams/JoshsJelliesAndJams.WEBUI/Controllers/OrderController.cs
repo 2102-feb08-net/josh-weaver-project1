@@ -28,10 +28,10 @@ namespace JoshsJelliesAndJams.WEBUI.Controllers
             return _orderRepository.PullHistory(id);
         }
 
-        [HttpGet("api/orderdetail")]
-        public List<ProductModel> DetailHistory(int orderID)
+        [HttpGet("api/order/detail/{orderId}")]
+        public List<ProductModel> DetailHistory(int orderId)
         {
-            return _orderRepository.SeeDetails(orderID);
+            return _orderRepository.SeeDetails(orderId);
         }
     }
 }
