@@ -9,7 +9,7 @@ namespace JoshsJelliesAndJams.Library.IRepositories
 {
     public interface IOrderRepository
     {
-        List<OrderModel> PullHistory(CustomerModel appCustomer);
+        List<OrderModel> PullHistory(int id);
 
         void AddOrder(OrderModel appOrder);
 

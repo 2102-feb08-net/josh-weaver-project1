@@ -16,16 +16,16 @@ namespace JoshsJelliesAndJams.WEBUI.Controllers
             _orderRepository = orderRepository;
         }
 
-        [HttpPost("api/neworder")]
+        [HttpPost("api/order/add")]
         public void AddOrder(OrderModel appOrder)
         {
             _orderRepository.AddOrder(appOrder);
         }
 
-        [HttpGet("api/orderhistory")]
-        public List<OrderModel> OrderHistory(CustomerModel appCustomer)
+        [HttpGet("api/order/history/{id}")]
+        public List<OrderModel> OrderHistory(int id)
         {
-            return _orderRepository.PullHistory(appCustomer);
+            return _orderRepository.PullHistory(id);
         }
 
         [HttpGet("api/orderdetail")]

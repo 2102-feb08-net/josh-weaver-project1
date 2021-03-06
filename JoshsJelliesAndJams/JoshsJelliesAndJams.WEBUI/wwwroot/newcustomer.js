@@ -20,7 +20,7 @@ function NewUser(e) {
 };
 
 function Ping(newuser) {
-    return fetch('/api/newcustomer', {
+    return fetch('/api/customer/add', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

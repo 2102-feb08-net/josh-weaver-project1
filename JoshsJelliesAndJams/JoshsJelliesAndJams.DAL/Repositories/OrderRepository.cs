@@ -29,7 +29,7 @@ namespace JoshsJelliesAndJams.DAL.Repositories
             {
                 CustomerId = appOrder.CustomerNumber,
                 StoreId = appOrder.StoreID,
-                NumberOfProducts = appOrder.Product.Sum(x => x.Quantity),
+                NumberOfProducts = appOrder.NumberOfProducts,
                 OrderTotal = appOrder.Total,
                 DatePlaced = dateTime
             };
@@ -76,10 +76,10 @@ namespace JoshsJelliesAndJams.DAL.Repositories
             }
         }
 
-        public List<OrderModel> PullHistory(CustomerModel appCustomer)
+        public List<OrderModel> PullHistory(int id)
         {
             List<Order> dbOrder = _context.Orders
-                .Where(x => x.CustomerId.Equals(appCustomer.CustomerID))
+                .Where(x => x.CustomerId.Equals(id))
                 .ToList();
 
             List<OrderModel> appOrder = new List<OrderModel>();
