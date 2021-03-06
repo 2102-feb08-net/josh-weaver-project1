@@ -3,7 +3,7 @@
 # of these patterns it will be ignored
 bin
 obj
-.vs/
+.vs
 .vscode/
 .sln
 node_modules/
