@@ -3,11 +3,12 @@
 # of these patterns it will be ignored
 bin
 obj
-.vs
+.vs/
 .vscode/
 .sln
 node_modules/
 .eslintrc
+package-lock.json
 
 
 # if a file is /already tracked/ by git, the
