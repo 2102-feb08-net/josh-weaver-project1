@@ -29,11 +29,16 @@ function Ping(newuser) {
         body: JSON.stringify(newuser)
     })
         .then(response => {
-        if (!response.ok) {
-            throw new Error(`Network response was not ok (${response.status})`);
-        }
-        return response.json();
-    });
+            if (!response.ok) {
+                throw new Error(`Network response was not ok (${response.status})`);
+            }
+            return response.json();
+        })
+        .then(customer => {
+            console.log(customer)
+            sessionStorage.setItem('customerId', customer.customerID);
+            sessionStorage.setItem('storeId', customer.defaultStore);
+        });
 }
 
 

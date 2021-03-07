@@ -15,13 +15,13 @@ namespace JoshsJelliesAndJams.WEBUI.Controllers
             _customerRepository = customerRepository;
         }
 
-        [HttpPost("api/newcustomer")]
+        [HttpPost("api/customer/add")]
         public CustomerModel AddCustomer(CustomerModel appCustomer)
         {
             return _customerRepository.AddCustomer(appCustomer);
         }
 
-        [HttpGet("api/lookupcustomer/{fname}/{lname}")]
+        [HttpGet("api/customer/{fname}/{lname}")]
         public CustomerModel LookupCustomer(string fname, string lname)
         {
             return _customerRepository.LookupCustomer(fname, lname);

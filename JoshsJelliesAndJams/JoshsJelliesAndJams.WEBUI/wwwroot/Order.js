@@ -1,34 +1,45 @@
 ﻿'use strict';
 
-let id = 1;
+const storeId = sessionStorage.getItem('storeId')
+const customerId = sessionStorage.getItem('customerId')
 
-function ProductTable(id) {
+function CheckSession() {
+    if (sessionStorage.getItem('storeId') == null) {
+        alert('Please sign in or sign up to place an order');
+        window.location.replace("https://joshsjelliesandjams.azurewebsites.net/newcustomer.html");
+    }
+    else {
+        ProductTable(storeId);
+    }
+}
+
+
+function ProductTable(storeId) {
+
     return fetch(`api/inventory/${id}`).then(response => {
         if (!response.ok) {
             throw new Error(`Network response was not ok (${response.status})`);
         }
         return response.json();
-    });
-}
+    })
+        .then(products => {
 
-ProductTable(id)
-    .then(products => {
-
-        for (const prod in products) {
-            const row = ordertable.insertRow();
-            row.innerHTML = `<td class="productId">${products[prod].productId}</td>
+            for (const prod in products) {
+                const row = ordertable.insertRow();
+                row.innerHTML = `<td class="productId">${products[prod].productId}</td>
                              <td class="name">${products[prod].name}</td>
                              <td><label for="quantity" name="quantity"><input type="text" class="quantity"></input></label></td>
                              <td class="costPerItem">${products[prod].costPerItem}</td>
                              <td><label for="total" name="total${[prod]}"><input type="text"  class="total" readonly></input></label></td>`;
-            row.addEventListener('change', () => {
-                console.log(document.getElementsByClassName('total')[prod]);
-                let total = document.getElementsByClassName('total')[prod];
-                total.value = (parseFloat(document.getElementsByClassName('quantity')[prod].value) * parseFloat(document.getElementsByClassName('costPerItem')[prod].innerHTML)).toFixed(2);
-            });
-        };
-    });
+                row.addEventListener('change', () => {
+                    let total = document.getElementsByClassName('total')[prod];
+                    total.value = (parseFloat(document.getElementsByClassName('quantity')[prod].value) * parseFloat(document.getElementsByClassName('costPerItem')[prod].innerHTML)).toFixed(2);
+                });
+            }
+        })
+}
 
+CheckSession();
 
 
 let order;
@@ -81,8 +92,8 @@ function ConstructOrder(productlist) {
         "orderPlaced": undefined,
         "total": parseFloat(totalCost).toFixed(2),
         "numberOfProducts": parseInt(totalQuantity),
-        "customerNumber": "17",
-        "storeId": "1"
+        "customerNumber": customerId.value,
+        "storeId": storeId.value
     };
     ToDb(newOrder)
 }
