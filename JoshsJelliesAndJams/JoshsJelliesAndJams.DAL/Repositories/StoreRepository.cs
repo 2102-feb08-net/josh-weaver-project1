@@ -81,7 +81,8 @@ namespace JoshsJelliesAndJams.DAL.Repositories
                 {
                     OrderNumber = item.OrderId,
                     OrderPlaced = (DateTime)item.DatePlaced,
-                    Total = item.OrderTotal
+                    Total = item.OrderTotal,
+                    NumberOfProducts = item.NumberOfProducts
                 };
                 appOrder.Add(lineItem);
             }

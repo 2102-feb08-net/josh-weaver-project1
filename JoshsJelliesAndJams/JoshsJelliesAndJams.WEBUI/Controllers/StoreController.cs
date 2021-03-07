@@ -16,7 +16,7 @@ namespace JoshsJelliesAndJams.WEBUI.Controllers
         {
             _storeRepository = storeRepository;
         }
-        [HttpGet("api/storehistory/{id}")]
+        [HttpGet("api/store/{storeID}")]
         public List<OrderModel> StoreHistory(int storeID)
         {
             return _storeRepository.StoreHistory(storeID);

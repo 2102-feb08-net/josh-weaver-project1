@@ -1,10 +1,10 @@
 ﻿/* eslint-disable no-undef */
 'use strict';
 
-const id = 17;
+const customerId = sessionStorage.getItem('customerId');
 
-function ProductTable() {
-    return fetch(`/api/order/history/${id}`).then(response => {
+function ProductTable(customerId) {
+    return fetch(`/api/order/history/${customerId}`).then(response => {
         if (!response.ok) {
             throw new Error(`Network response was not ok (${response.status})`);
         }
@@ -12,7 +12,7 @@ function ProductTable() {
     });
 }
 
-ProductTable(id)
+ProductTable(customerId)
     .then(orders => {
         for (const order of orders) {
             console.log(orders)
