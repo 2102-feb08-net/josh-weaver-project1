@@ -16,7 +16,7 @@ function CheckSession() {
 
 function ProductTable(storeId) {
 
-    return fetch(`api/inventory/${id}`).then(response => {
+    return fetch(`api/inventory/${storeId}`).then(response => {
         if (!response.ok) {
             throw new Error(`Network response was not ok (${response.status})`);
         }
@@ -92,14 +92,14 @@ function ConstructOrder(productlist) {
         "orderPlaced": undefined,
         "total": parseFloat(totalCost).toFixed(2),
         "numberOfProducts": parseInt(totalQuantity),
-        "customerNumber": customerId.value,
-        "storeId": storeId.value
+        "customerNumber": customerId,
+        "storeId": storeId
     };
     ToDb(newOrder)
 }
 
 function ToDb(newOrder) {
-    return fetch('/api/neworder', {
+    return fetch('/api/order/add', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

@@ -36,7 +36,7 @@ namespace JoshsJelliesAndJams.WEBUI.Controllers
         //{
         //    return _storeRepository.CheckInventory(storeName);
         //}
-        [HttpGet("api/storelist")]
+        [HttpGet("api/store/list")]
         public List<StoreModel> ListStores()
         {
             return _storeRepository.ListStores();
