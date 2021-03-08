@@ -39,7 +39,6 @@ function Ping(newuser) {
             sessionStorage.setItem('customerId', customer.customerID);
             sessionStorage.setItem('storeId', customer.defaultStore);
         });
-    window.preventDefault();
 }
 
 function GetStores() {
@@ -53,14 +52,9 @@ function GetStores() {
 
 GetStores()
     .then(stores => {
-        console.log(stores);
-        
         for (const store of stores) {
             const selectStore = document.getElementById('stores');
-            const option = document.createElement('option');
-            option.text = `${store.storeName} - ${store.storeCity}`, `${store.storeState}`
-            option.value = `${store.storeID }`
-            selectStore.appendChild(new Option(option.text, option.value));
+            selectStore.appendChild(new Option(`${store.storeName} - ${store.storeCity}, ${store.storeState}`, `${store.storeID}`));
         }
     })
 
