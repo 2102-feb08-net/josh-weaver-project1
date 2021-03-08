@@ -31,7 +31,6 @@ namespace JoshsJelliesAndJams.Tests
         public void StringValidatorTest()
         {
             //arrange
-            string expected = "JOSH";
             string test = "josh";
             //act
 

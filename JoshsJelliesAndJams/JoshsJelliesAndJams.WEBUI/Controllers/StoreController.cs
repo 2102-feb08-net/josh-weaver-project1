@@ -16,26 +16,19 @@ namespace JoshsJelliesAndJams.WEBUI.Controllers
         {
             _storeRepository = storeRepository;
         }
+
         [HttpGet("api/store/{storeID}")]
         public List<OrderModel> StoreHistory(int storeID)
         {
             return _storeRepository.StoreHistory(storeID);
         }
-        [HttpGet("api/storehistory/{name}")]
-        public List<OrderModel> StoreHistory(string storeName)
-        {
-            return _storeRepository.StoreHistory(storeName);
-        }
-        [HttpGet("api/inventory/{StoreID}")]
+
+        [HttpGet("api/store/inventory/{StoreID}")]
         public List<ProductModel> CheckInventory(int storeID)
         {
             return _storeRepository.CheckInventory(storeID);
         }
-        //[HttpGet("api/inventory/{name}")]
-        //public List<ProductModel> CheckInventory(string storeName)
-        //{
-        //    return _storeRepository.CheckInventory(storeName);
-        //}
+
         [HttpGet("api/store/list")]
         public List<StoreModel> ListStores()
         {

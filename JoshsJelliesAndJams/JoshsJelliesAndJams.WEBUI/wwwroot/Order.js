@@ -16,7 +16,7 @@ function CheckSession() {
 
 function ProductTable(storeId) {
 
-    return fetch(`api/inventory/${storeId}`).then(response => {
+    return fetch(`api/store/inventory/${storeId}`).then(response => {
         if (!response.ok) {
             throw new Error(`Network response was not ok (${response.status})`);
         }
@@ -28,7 +28,7 @@ function ProductTable(storeId) {
                 const row = ordertable.insertRow();
                 row.innerHTML = `<td class="productId">${products[prod].productId}</td>
                              <td class="name">${products[prod].name}</td>
-                             <td><label for="quantity" name="quantity"><input type="text" class="quantity"></input></label></td>
+                             <td><label for="quantity" name="quantity"><input type="number" class="quantity" min="0" max="15"></input></label></td>
                              <td class="costPerItem">${products[prod].costPerItem}</td>
                              <td><label for="total" name="total${[prod]}"><input type="text"  class="total" readonly></input></label></td>`;
                 row.addEventListener('change', () => {
@@ -71,7 +71,7 @@ function SubmitOrder(e){
 
 
 function RemoveBlanks(productlist) {
-    productlist = productlist.filter(x => (x.quantity > "0") && (x.quantity != undefined));
+    productlist = productlist.filter(x => (x.quantity > 0) && (x.quantity != undefined));
     ConstructOrder(productlist)
 }
 
