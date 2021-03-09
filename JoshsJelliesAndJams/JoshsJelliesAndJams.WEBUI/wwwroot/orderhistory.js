@@ -15,12 +15,12 @@ function ProductTable(customerId) {
 ProductTable(customerId)
     .then(orders => {
         for (const order of orders) {
-            console.log(orders)
+            const total = order.total;
             const row = ordertable.insertRow();
             row.innerHTML = `<td class="productId">${order.orderNumber}</td>
                              <td class="date">${order.orderPlaced}</td>
                              <td class="quantity">${order.numberOfProducts}</td>
-                             <td class="total">${order.total}</td>`;
+                             <td class="total">${total.toFixed(2)}</td>`;
             row.addEventListener('click', () => {
                 sessionStorage.setItem('orderId', order.orderNumber);
                 location = 'orderdetails.html';

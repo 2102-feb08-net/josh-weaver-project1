@@ -30,7 +30,7 @@ function Ping(newuser) {
     })
         .then(response => {
             if (!response.ok) {
-                throw new Error(`Network response was not ok (${response.status})`);
+                alert('Something went wrong, please try again.');
             }
             return response.json();
         })

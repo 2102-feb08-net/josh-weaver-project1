@@ -16,15 +16,29 @@ namespace JoshsJelliesAndJams.WEBUI.Controllers
         }
 
         [HttpPost("api/customer/add")]
-        public CustomerModel AddCustomer(CustomerModel appCustomer)
+        public IActionResult AddCustomer(CustomerModel appCustomer)
         {
-            return _customerRepository.AddCustomer(appCustomer);
+            if (ModelState.IsValid)
+            {
+                return Ok(_customerRepository.AddCustomer(appCustomer));
+            }
+            else
+            {
+                return BadRequest();
+            }
         }
 
         [HttpGet("api/customer/{fname}/{lname}")]
-        public CustomerModel LookupCustomer(string fname, string lname)
+        public IActionResult LookupCustomer(string fname, string lname)
         {
-            return _customerRepository.LookupCustomer(fname, lname);
+            if(ModelState.IsValid)
+            {
+                return Ok(_customerRepository.LookupCustomer(fname, lname));
+            }
+            else
+            {
+                return BadRequest();
+            }
         }
 
         [HttpPost("api/adddefaultstore")]

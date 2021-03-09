@@ -45,7 +45,7 @@ namespace JoshsJelliesAndJams.WEBUI
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "EmailApp.WebUI", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "JoshsJelliesAndJams.WebUI", Version = "v1" });
             });
 
             services.AddScoped<ICustomerRepository, CustomerRepository>();

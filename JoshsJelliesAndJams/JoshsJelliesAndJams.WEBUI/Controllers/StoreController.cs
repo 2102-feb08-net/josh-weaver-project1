@@ -18,21 +18,43 @@ namespace JoshsJelliesAndJams.WEBUI.Controllers
         }
 
         [HttpGet("api/store/{storeID}")]
-        public List<OrderModel> StoreHistory(int storeID)
+        public IActionResult StoreHistory(int storeID)
         {
-            return _storeRepository.StoreHistory(storeID);
+            if (ModelState.IsValid)
+            {
+                return Ok(_storeRepository.StoreHistory(storeID));
+            }
+            else
+            {
+                return BadRequest();
+            }
         }
 
+
         [HttpGet("api/store/inventory/{StoreID}")]
-        public List<ProductModel> CheckInventory(int storeID)
+        public IActionResult CheckInventory(int storeID)
         {
-            return _storeRepository.CheckInventory(storeID);
+            if (ModelState.IsValid)
+            {
+                return Ok(_storeRepository.CheckInventory(storeID));
+            }
+            else
+            {
+                return BadRequest();
+            }
         }
 
         [HttpGet("api/store/list")]
-        public List<StoreModel> ListStores()
+        public IActionResult ListStores()
         {
-            return _storeRepository.ListStores();
+            if (ModelState.IsValid)
+            {
+                return Ok(_storeRepository.ListStores());
+            }
+            else
+            {
+                return BadRequest();
+            }
         }
     }
 }

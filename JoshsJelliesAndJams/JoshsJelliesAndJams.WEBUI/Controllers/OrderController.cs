@@ -17,21 +17,44 @@ namespace JoshsJelliesAndJams.WEBUI.Controllers
         }
 
         [HttpPost("api/order/add")]
-        public void AddOrder(OrderModel appOrder)
+        public IActionResult AddOrder(OrderModel appOrder)
         {
-            _orderRepository.AddOrder(appOrder);
+            if (ModelState.IsValid)
+            {
+                _orderRepository.AddOrder(appOrder);
+                return Ok();
+            }
+            else
+            {
+                return BadRequest();
+            }
+            
         }
 
         [HttpGet("api/order/history/{id}")]
-        public List<OrderModel> OrderHistory(int id)
+        public IActionResult OrderHistory(int id)
         {
-            return _orderRepository.PullHistory(id);
+            if (ModelState.IsValid)
+            {
+                return Ok(_orderRepository.PullHistory(id));
+            }
+            else
+            {
+                return BadRequest();
+            }
         }
 
         [HttpGet("api/order/detail/{orderId}")]
-        public List<ProductModel> DetailHistory(int orderId)
+        public IActionResult DetailHistory(int orderId)
         {
-            return _orderRepository.SeeDetails(orderId);
+            if (ModelState.IsValid)
+            {
+                return Ok(_orderRepository.SeeDetails(orderId));
+            }
+            else
+            {
+                return BadRequest();
+            }    
         }
     }
 }
