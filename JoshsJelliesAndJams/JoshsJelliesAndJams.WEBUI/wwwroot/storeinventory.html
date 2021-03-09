@@ -9,10 +9,12 @@
 
 </head>
 <body onload="GetStores">
-    <h1>Josh's Jellies and Jams</h1>
+    <div id="banner">
+        <h1>Josh's Jellies and Jams</h1>
+    </div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="index.html" id="bannerimg"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -49,10 +51,9 @@
             </div>
         </div>
     </nav>
-    <p>Welcome to Josh's Jellies and Jams.</p>
     <div>
-        <fieldset>
-            <legend>Store</legend>
+        <fieldset id="fieldset">
+            <legend>Store Inventory</legend>
             <label for="stores">
                 <select name="stores" id="stores">
                     <option value="null">--Please select a store--</option>

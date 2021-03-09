@@ -1,8 +1,29 @@
-#orderform {
-    width: 70%;
-    background-color: blue;
+#banner {
+    background-image: url('images/jam-banner.jpg');
+    height: 300px;
+    text-align: center;
+    padding-top: 130px;
+    font-weight: 100;
+    color: tan;
 }
 
-td{
-    
+#bannerimg {
+    background-image: url('images/plaid.jpg');
+    height: 50px;
+    width: 100px;
+}
+
+p {
+    text-align: center;
+    font-weight: 500;
+}
+
+#userform{
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-top: 5%
+}
+
+#fieldset {
+    text-align: center;
 }
