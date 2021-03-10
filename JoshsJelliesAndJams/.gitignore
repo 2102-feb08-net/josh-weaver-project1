@@ -5,6 +5,7 @@ bin
 obj
 .vs
 .vscode/
+.vs/
 .sln
 node_modules/
 .eslintrc
