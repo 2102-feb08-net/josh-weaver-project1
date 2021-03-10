@@ -45,7 +45,7 @@ function ProductTable(storeID) {
                     total = total.toFixed(2);
                     const row = ordertable.insertRow();
                     row.innerHTML = `<td class="productId">${order.orderNumber}</td>
-                             <td class="date">${order.orderPlaced}</td>
+                             <td class="date">${new Date(order.orderPlaced).toLocaleString()}</td>
                              <td class="quantity">${order.numberOfProducts}</td>
                              <td class="total">${total}</td>`;
                     row.addEventListener('click', () => {
