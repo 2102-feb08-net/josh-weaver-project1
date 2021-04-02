@@ -11,7 +11,7 @@ Josh's Jellies and Jams is a online store where customers sign up or login to pl
 - JavaScript
 - CSS
 - HTML
-- CI/CD with Azure Dev
+- CI/CD with Azure DevOps
 - SonarCloud static code analysis
 
 ## Features
