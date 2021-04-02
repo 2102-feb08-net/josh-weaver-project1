@@ -32,3 +32,9 @@ List of To-Do features
 ## Getting Started
 
 ```git clone https://github.com/2102-feb08-net/josh-weaver-project1.git```
+
+### Usage
+
+Run the program:
+```dotnet run -p ~/JoshsJelliesAndJams.WebUI```
+
