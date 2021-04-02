@@ -4,7 +4,7 @@ Josh's Jellies and Jams is a online store where customers sign up or login to pl
 
 ## Technologies Used
 - SQL Server hosted on Azure Cloud
-- Entity Framework Core
+- Entity Framework
 - C#
 - ASP.NET
 - AJAX
